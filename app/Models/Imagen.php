@@ -12,7 +12,7 @@ class Imagen extends Model
     /**
      * Relacion polimorfica 
      * 
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\morphto
      */
     public function imageable(){
         return $this->morphTo();

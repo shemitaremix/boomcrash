@@ -45,7 +45,7 @@ class User extends Authenticatable
     /**
      * 
      * Relacion uno a muchos con la tabla posts
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function posts(){
         return $this->hasMany(Posts::class);
