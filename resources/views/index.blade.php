@@ -6,21 +6,29 @@
 
 @section('body')
 <div class="row tm-row">
+
+    @foreach ($posts as $post)
     <article class="col-12 col-md-6 tm-post">
         <hr class="tm-hr-primary">
-        <a href="post.html" class="effect-lily tm-post-link tm-pt-60">
-            <div class="tm-post-link-inner">
-                <img src="img/img-01.jpg" alt="Image" class="img-fluid">                            
+        <a href="{{route('post')}}" class="effect-lily tm-post-link tm-pt-60">
+            
+            <div class="tm-post-link-inner bg-cover">
+                   
+                <img src="{{Storage::url($post->imagenes->url)}}" alt="Image" class="img-fluid">                            
             </div>
-            <span class="position-absolute tm-new-badge">New</span>
-            <h2 class="tm-pt-30 tm-color-primary tm-post-title">Simple and useful HTML layout</h2>
+            <span class="position-absolute tm-new-badge">Nuevo</span>
+            <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{$post->name}}</h2>
         </a>                    
         <p class="tm-pt-30">
             There is a clickable image with beautiful hover effect and active title link for each post item. 
             Left side is a sticky menu bar. Right side is a blog content that will scroll up and down.
         </p>
         <div class="d-flex justify-content-between tm-pt-45">
-            <span class="tm-color-primary">Travel . Events</span>
+            <span >
+                @foreach ($post->tags as $tag)
+                    <a href="" style="color:{{$tag->color}}">{{$tag->name}}</a>
+                @endforeach
+            </span>
             <span class="tm-color-primary">June 24, 2020</span>
         </div>
         <hr>
@@ -29,11 +37,16 @@
             <span>by Admin Nat</span>
         </div>
     </article>
+
+    @endforeach
+
+
+
     <article class="col-12 col-md-6 tm-post">
         <hr class="tm-hr-primary">
         <a href="post.html" class="effect-lily tm-post-link tm-pt-60">
             <div class=" tm-post-link-inner">
-                <img src="img/img-02.jpg" alt="Image" class="img-fluid">                            
+                <img src="assets/img/img-02.jpg" alt="Image" class="img-fluid">                            
             </div>
             <span class="position-absolute tm-new-badge">New</span>
             <h2 class="tm-pt-30 tm-color-primary tm-post-title">Multi-purpose blog template</h2>
@@ -56,7 +69,7 @@
         <hr class="tm-hr-primary">
         <a href="post.html" class="effect-lily tm-post-link tm-pt-20">
             <div class="tm-post-link-inner">
-                <img src="img/img-03.jpg" alt="Image" class="img-fluid">
+                <img src="assets/img-03.jpg" alt="Image" class="img-fluid">
             </div>
             <h2 class="tm-pt-30 tm-color-primary tm-post-title">How can you apply Xtra Blog</h2>
         </a>                    

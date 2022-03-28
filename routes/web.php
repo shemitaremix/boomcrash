@@ -1,25 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Rutas Post
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Aqui se encontraran todas las rutas de los post creados 
+| de misma manera la vista a la que este va a retornar
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/inicio', function () {
-    return view('index');
-})->name('inicio');
+Route::get('/',[PostController::class,'index'])->name('inicio');
 
 Route::get('/blog', function () {
     return view('about');
@@ -30,5 +23,9 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 Route::get('/post', function () {
+    return view('post');
+})->name('post');
+
+Route::get('/index', function () {
     return view('post');
 })->name('post');

@@ -44,7 +44,7 @@ https://templatemo.com/tm-553-xtra-blog
                         <i class="fas fa-users"></i>
                         Blog
                     </a></li>
-                    <li class="tm-nav-item" {{! Route::is('contacto') ?: 'active'}}><a href="{{route('contacto')}}" class="tm-nav-link"">
+                    <li class="tm-nav-item {{! Route::is('contacto') ?: 'active'}}"><a href="{{route('contacto')}}" class="tm-nav-link"">
                         <i class="far fa-comments"></i>
                         Contacto
                     </a></li>
