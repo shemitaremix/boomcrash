@@ -26,7 +26,7 @@
         <div class="d-flex justify-content-between tm-pt-45">
             <span >
                 @foreach ($post->tags as $tag)
-                    <a href="" style="color:{{$tag->color}}">{{$tag->name}}</a>
+                    <a href="" style="inline-block; color:{{$tag->color}}; text-white; rounded-full">{{$tag->name}}</a>
                 @endforeach
             </span>
             <span class="tm-color-primary">June 24, 2020</span>
