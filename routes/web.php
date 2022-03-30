@@ -13,6 +13,11 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/',[PostController::class,'index'])->name('inicio');
+Route::get('/posts/{post}',[PostController::class,'show'])->name('posts');
+
+Route::get('post', function () {
+    return view('welcome');
+})->name('post');
 
 Route::get('/blog', function () {
     return view('about');
@@ -22,10 +27,5 @@ Route::get('/contacto', function () {
     return view('contact');
 })->name('contacto');
 
-Route::get('/post', function () {
-    return view('post');
-})->name('post');
 
-Route::get('/index', function () {
-    return view('post');
-})->name('post');
+

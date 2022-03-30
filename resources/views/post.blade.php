@@ -8,34 +8,27 @@
 <div class="row tm-row">
     <div class="col-12">
         <hr class="tm-hr-primary tm-mb-55">
-        <!-- Video player 1422x800 -->
+        {{-- <!-- Video player 1422x800 -->
         <video width="954" height="535" controls class="tm-mb-40">
             <source src="video/wheat-field.mp4" type="video/mp4">							  
             Your browser does not support the video tag.
-        </video>
+        </video> --}}
+        <img class="w-full h-80 object-cover object center" src="{{Storage::url($post->imagenes->url)}}" >
     </div>
 </div>
 <div class="row tm-row">
     <div class="col-lg-8 tm-post-col">
         <div class="tm-post-full">                    
             <div class="mb-4">
-                <h2 class="pt-2 tm-color-primary tm-post-title">Single Post of Xtra Blog HTML Template</h2>
+                <h2 class="pt-2 tm-color-primary tm-post-title">{{$post->name}}</h2>
                 <p class="tm-mb-40">June 16, 2020 posted by Admin Nat</p>
                 <p>
-                    This is a description of the video post. You can also have an image instead of
-                    the video. You can free download 
-                    <a rel="nofollow" href="https://templatemo.com/tm-553-xtra-blog" target="_blank">Xtra Blog Template</a> 
-                    from TemplateMo website. Phasellus maximus quis est sit amet maximus. Vestibulum vel rutrum
-                    lorem, ac sodales augue. Aliquam erat volutpat. Duis lectus orci, blandit in arcu
-                    est, elementum tincidunt lectus. Praesent vel justo tempor, varius lacus a,
-            pharetra lacus. </p>
-                <p>
-                    Duis pretium efficitur nunc. Mauris vehicula nibh nisi. Curabitur gravida neque
-                    dignissim, aliquet nulla sed, condimentum nulla. Pellentesque id venenatis
-                    quam, id cursus velit. Fusce semper tortor ac metus iaculis varius. Praesent
-                    aliquam ex vel lectus ornare tristique. Nunc et eros quis enim feugiat tincidunt
-                    et vitae dui.
+                   {{$post->extract}}
                 </p>
+                <h2 class="pt-2 tm-color-primary tm-post-title">Bombazo</h2>
+                <p>
+                    {{$post->body}}
+                 </p>
                 <span class="d-block text-right tm-color-primary">Creative . Design . Business</span>
             </div>
             
@@ -97,15 +90,8 @@
     <aside class="col-lg-4 tm-aside-col">
         <div class="tm-post-sidebar">
             <hr class="mb-3 tm-hr-primary">
-            <h2 class="mb-4 tm-post-title tm-color-primary">Categories</h2>
-            <ul class="tm-mb-75 pl-5 tm-category-list">
-                <li><a href="#" class="tm-color-primary">Visual Designs</a></li>
-                <li><a href="#" class="tm-color-primary">Travel Events</a></li>
-                <li><a href="#" class="tm-color-primary">Web Development</a></li>
-                <li><a href="#" class="tm-color-primary">Video and Audio</a></li>
-                <li><a href="#" class="tm-color-primary">Etiam auctor ac arcu</a></li>
-                <li><a href="#" class="tm-color-primary">Sed im justo diam</a></li>
-            </ul>
+            <h2 class="mb-4 tm-post-title tm-color-primary">Mas en {{$post->categoria}}</h2>
+            
             <hr class="mb-3 tm-hr-primary">
             <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
             <a href="#" class="d-block tm-mb-40">

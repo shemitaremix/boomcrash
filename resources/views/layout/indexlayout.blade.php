@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@yield('title')</title>
-	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link rel="stylesheet" href="{{asset('assets/fontawesome/css/all.min.css')}}"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/templatemo-xtra-blog.css" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/templatemo-xtra-blog.css')}}" rel="stylesheet">
 <!--
     
 TemplateMo 553 Xtra Blog
@@ -32,10 +32,10 @@ https://templatemo.com/tm-553-xtra-blog
                         <i class="fas fa-home"></i>
                         Inicio
                     </a></li>
-                    <li class="tm-nav-item {{! Route::is('post') ?: 'active'}}"><a href="{{route('post')}}" class="tm-nav-link">
+                    {{-- <li class="tm-nav-item {{! Route::is('post') ?: 'active'}}"><a href="{{route('posts')}}" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Post
-                    </a></li>
+                    </a></li> --}}
                     <li class="tm-nav-item {{! Route::is('post') ?: 'active'}}"><a href="post.html" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Crear Post
@@ -96,7 +96,7 @@ https://templatemo.com/tm-553-xtra-blog
             </footer>
         </main>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/templatemo-script.js"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/templatemo-script.js')}}"></script>
 </body>
 </html>
