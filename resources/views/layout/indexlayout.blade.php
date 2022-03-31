@@ -40,6 +40,8 @@ https://templatemo.com/tm-553-xtra-blog
                         <i class="fas fa-pen"></i>
                         Crear Post
                     </a></li>
+
+                    
                     <li class="tm-nav-item {{! Route::is('blog') ?: 'active'}}"><a href="{{route('blog')}}" class="tm-nav-link">
                         <i class="fas fa-users"></i>
                         Blog
