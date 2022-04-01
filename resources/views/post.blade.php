@@ -90,17 +90,8 @@
     <aside class="col-lg-4 tm-aside-col">
         <div class="tm-post-sidebar">
             <hr class="mb-3 tm-hr-primary">
-            <h2 class="mb-4 tm-post-title tm-color-primary">Mas en {{$post->category->nombre}}</h2>
-            <ul class="tm-mb-75 pl-5 tm-category-list">
-                @foreach($similares as $similar)
-                    <li>
-                        <a href="{{route('posts',$similar)}}" class="tm-color-primary">
-                            <img src="{{Storage::url($similar->imagenes->url)}}" alt="Image" class="img-fluid mb-2">
-                            <span class="tm-color-primary">{{$similar->name}}</span
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
+            <h2 class="mb-4 tm-post-title tm-color-primary">Mas en {{$post->categoria}}</h2>
+            
             <hr class="mb-3 tm-hr-primary">
             <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
             <a href="#" class="d-block tm-mb-40">

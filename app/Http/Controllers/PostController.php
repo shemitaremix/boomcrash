@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\Models\Categoria;
 
 class PostController extends Controller
 {
@@ -25,9 +24,7 @@ class PostController extends Controller
      * 
      */
     public function show(Post $post){
-        $similares = Post::where('category_id',$post->category_id)->where('status',2)->where('id','!=',$post->id)->latest('id')->get();    
+        $similares = Post::where('category_id',$post->category_id)->where('status',2)->latest('id')->take(4)->get();    
         return view('post', compact('post','similares'));
     }
-
-   
 }
